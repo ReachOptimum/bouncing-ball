@@ -18,3 +18,7 @@ Then, navigate to your repository home folder and install dependencies
 ```
 pip install -r requirements.txt
 ```
+
+## :balance_scale: License
+
+This project is licensed under the MIT License, which allows anyone to use, modify, and distribute this software for free, as long as the original copyright and license notice are included. See the [LICENSE](LICENSE) file for more details.
