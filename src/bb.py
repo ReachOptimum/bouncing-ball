@@ -55,7 +55,7 @@ class Ball:
             self.t += dt
 
 
-def animate_balls(balls, dt=0.01, animation_speed=1.0):
+def animate_balls(balls, dt=0.01, animation_speed=1.0, save_path=None):
     for ball in balls:
         ball.simulate(dt=dt)
 
@@ -137,6 +137,22 @@ def animate_balls(balls, dt=0.01, animation_speed=1.0):
         repeat=False
     )
 
+    if save_path is not None:
+        for i, ball in enumerate(balls):
+            trace_artists[i].set_data(
+                ball.x_list,
+                [yy + ball.radius for yy in ball.y_list]
+            )
+            ball_artists[i].set_data(
+                [ball.x_list[-1]],
+                [ball.y_list[-1] + ball.radius]
+            )
+
+        final_time = max(ball.time_list[-1] for ball in balls)
+        time_text.set_text(f"Time: {final_time:.2f} s")
+
+        fig.savefig(save_path, dpi=300, bbox_inches="tight")
+
     plt.show()
 
 
@@ -154,7 +170,8 @@ def main():
     animate_balls(
         balls,
         dt=0.01,
-        animation_speed=1.0
+        animation_speed=1.0,
+        save_path=r'res/balls.pdf'
     )
 
 
