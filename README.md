@@ -18,6 +18,14 @@ Then, navigate to your repository home folder and install dependencies
 ```
 pip install -r requirements.txt
 ```
+### Run your code
+
+Now, you are ready to rock :sunglasses:\
+From the home folder, just run
+
+```
+python src/<your_script>.py
+```
 
 ## :balance_scale: License
 
