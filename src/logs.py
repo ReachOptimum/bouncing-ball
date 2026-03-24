@@ -5,14 +5,12 @@ import configparser
 
 os.makedirs("logs", exist_ok=True)
 
-DIR = r"logs"
-FILE = r"log.txt"
-TELEGRAM_CONFIG = os.path.expanduser("~/.config/telegram.ini")
-logfile = os.path.join(DIR, FILE)
+TELEGRAM_CONFIG = r"configs/config.ini"
+LOGFILE = r"logs/log.txt"
 
 # ---- SETUP LOGGING ----
 logging.basicConfig(
-    filename=logfile,
+    filename=LOGFILE,
     level=logging.INFO,
     format="%(asctime)s — %(levelname)s — %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
