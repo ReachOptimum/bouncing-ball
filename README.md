@@ -24,7 +24,7 @@ Now, you are ready to rock :sunglasses:\
 From the home folder, just run
 
 ```
-python src/<your_script>.py
+python src/bb.py
 ```
 
 ## :balance_scale: License
